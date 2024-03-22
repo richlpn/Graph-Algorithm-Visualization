@@ -1,5 +1,3 @@
-# TODO: Select a random start and End point
-# TODO: Randomly implement walls on the matrix
 
 from random import choice
 
