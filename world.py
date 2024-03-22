@@ -1,4 +1,3 @@
-# TODO: Implement a function that returns a matrix of size N x M
 # TODO: Select a random start and End point
 # TODO: Randomly implement walls on the matrix
 
@@ -20,9 +19,11 @@ class Labyrinth:
 
         for y in range(0, self.world_coords.y, size):
             for x in range(0, self.world_coords.x, size):
+
                 node_coord = Coordinates(x, y)
-                self.world[node_coord] = Node(
-                    node_coord, size, 0, choice([False, True]))
+                is_wall = choice([False, True])
+
+                self.world[node_coord] = Node(node_coord, size, 0, is_wall)
 
     def get_node(self, coord: Coordinates) -> Node:
         """Returns the node at the given coordinate
